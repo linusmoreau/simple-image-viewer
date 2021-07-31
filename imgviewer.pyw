@@ -169,8 +169,7 @@ def menu(loc, history):
             if not entry.name.startswith('.'):
                 if entry.is_dir():
                     dirs.append(entry)
-                elif entry.is_file() and os.path.splitext(entry.path)[1].strip('.') in \
-                        ['jpg', 'jpeg', 'png', 'gif', 'jfif']:
+                elif entry.is_file():
                     files.append(entry)
     files.sort(key=compare)
     all_entries = dirs + files
